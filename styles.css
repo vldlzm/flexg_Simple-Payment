@@ -881,6 +881,241 @@ body {
 .purchase-btn:hover {
     background-color: #ff5252;
 }
+/* ========== 구매 바텀시트 ========== */
+.bsheet-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.bsheet-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.bsheet-panel {
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    max-width: 440px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.bsheet-overlay.active .bsheet-panel {
+    transform: translateY(0);
+}
+
+/* 닫기 버튼 */
+.bsheet-top {
+    display: flex;
+    justify-content: center;
+    padding: 14px 0 6px;
+    background: #fff;
+}
+
+.bsheet-close-btn {
+    background: #7c4dff;
+    border: none;
+    border-radius: 20px;
+    width: 52px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* 바텀시트 본문 */
+.bsheet-body {
+    padding: 4px 18px 0;
+}
+
+.bsheet-app-notice {
+    font-size: 13px;
+    color: #555;
+    padding: 10px 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bsheet-info-icon {
+    color: #888;
+    font-size: 13px;
+}
+
+/* 수량 선택 */
+.bsheet-qty-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 14px;
+}
+
+.bsheet-qty-ctrl {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bsheet-qty-btn {
+    background: #fff;
+    border: none;
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.bsheet-qty-num {
+    width: 38px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bsheet-item-price {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+}
+
+/* 금액 요약 */
+.bsheet-summary {
+    background: #f7f7f7;
+    border-radius: 6px;
+    padding: 12px 14px;
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 14px;
+}
+
+/* 총 상품금액 */
+.bsheet-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0 18px;
+}
+
+.bsheet-total-label {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.bsheet-total-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+}
+
+/* 버튼 영역 */
+.bsheet-btn-row {
+    display: flex;
+    gap: 8px;
+    padding: 0 14px 20px;
+}
+
+.bsheet-cart-btn {
+    flex: 1;
+    padding: 14px 0;
+    background: #3d3535;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+}
+
+.bsheet-npay-wrap {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bsheet-npay-badge {
+    position: absolute;
+    top: -12px;
+    background: #ff9500;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 10px;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.bsheet-npay-btn {
+    width: 100%;
+    padding: 14px 0;
+    background: #03c75a;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.bsheet-n-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    color: #03c75a;
+    border-radius: 3px;
+    font-weight: 900;
+    font-size: 11px;
+}
+
+.bsheet-direct-btn {
+    flex: 1;
+    padding: 14px 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+}
+
 /* ========== 반응형 디자인 ========== */
 @media (max-width: 1200px) {
     .sidebar-right {

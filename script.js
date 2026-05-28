@@ -49,3 +49,38 @@ function updateDescription(index) {
 document.addEventListener('DOMContentLoaded', function() {
     updateDescription(0);
 });
+
+// ===== 구매 바텀시트 =====
+const UNIT_PRICE = 10000;
+const SHIPPING   = 3000;
+let bsheetQty = 1;
+
+function openBuySheet() {
+    bsheetQty = 1;
+    renderBuySheet();
+    document.getElementById('bsheetOverlay').classList.add('active');
+}
+
+function closeBuySheet() {
+    document.getElementById('bsheetOverlay').classList.remove('active');
+}
+
+function handleOverlayClick(e) {
+    if (e.target === document.getElementById('bsheetOverlay')) closeBuySheet();
+}
+
+function changeQty(delta) {
+    bsheetQty = Math.max(1, Math.min(10, bsheetQty + delta));
+    renderBuySheet();
+}
+
+function renderBuySheet() {
+    const itemTotal = UNIT_PRICE * bsheetQty;
+    const total     = itemTotal + SHIPPING;
+    const fmt = n => n.toLocaleString('ko-KR') + '원';
+    document.getElementById('bsheetQty').textContent       = bsheetQty;
+    document.getElementById('bsheetItemPrice').textContent = fmt(itemTotal);
+    document.getElementById('bsheetSummaryText').textContent =
+        '상품금액 ' + fmt(itemTotal) + ' + 배송비 ' + fmt(SHIPPING);
+    document.getElementById('bsheetTotal').textContent     = fmt(total);
+}

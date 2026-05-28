@@ -161,7 +161,7 @@
                                         <line x1="26" y1="14" x2="27.5" y2="14" stroke="#555" stroke-width="1.4" stroke-linecap="round"/>
                                     </svg>
                                 </button>
-                                <button class="pdv-buy-btn">구매하기</button>
+                                <button class="pdv-buy-btn" onclick="openBuySheet()">구매하기</button>
                             </div>
                         </div>
                     </div>
@@ -181,6 +181,60 @@
                 </div>
             </div>
         </aside>
+    </div>
+
+    <!-- 구매 바텀시트 -->
+    <div class="bsheet-overlay" id="bsheetOverlay" onclick="handleOverlayClick(event)">
+        <div class="bsheet-panel" id="bsheetPanel">
+            <!-- 닫기 버튼 -->
+            <div class="bsheet-top">
+                <button class="bsheet-close-btn" onclick="closeBuySheet()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="bsheet-body">
+                <!-- APP 안내 -->
+                <p class="bsheet-app-notice">
+                    <span class="bsheet-info-icon">ⓘ</span> APP에서 구매시 즉시 할인 상품
+                </p>
+
+                <!-- 수량 선택 -->
+                <div class="bsheet-qty-row">
+                    <div class="bsheet-qty-ctrl">
+                        <button class="bsheet-qty-btn" onclick="changeQty(-1)">−</button>
+                        <span class="bsheet-qty-num" id="bsheetQty">1</span>
+                        <button class="bsheet-qty-btn" onclick="changeQty(1)">+</button>
+                    </div>
+                    <span class="bsheet-item-price" id="bsheetItemPrice">10,000원</span>
+                </div>
+
+                <!-- 금액 요약 -->
+                <div class="bsheet-summary">
+                    <span id="bsheetSummaryText">상품금액 10,000원 + 배송비 3,000원</span>
+                </div>
+
+                <!-- 총 상품금액 -->
+                <div class="bsheet-total-row">
+                    <span class="bsheet-total-label">총 상품금액</span>
+                    <span class="bsheet-total-price" id="bsheetTotal">13,000원</span>
+                </div>
+            </div>
+
+            <!-- 구매 버튼 영역 -->
+            <div class="bsheet-btn-row">
+                <button class="bsheet-cart-btn">장바구니</button>
+                <div class="bsheet-npay-wrap">
+                    <span class="bsheet-npay-badge">최대 2.5% 적립!</span>
+                    <button class="bsheet-npay-btn">
+                        <span class="bsheet-n-icon">N</span>pay 구매
+                    </button>
+                </div>
+                <button class="bsheet-direct-btn">바로 구매</button>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
