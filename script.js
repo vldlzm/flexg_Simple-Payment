@@ -50,6 +50,9 @@ const menuData = [
 
 // 메뉴 아이템 선택 함수
 function selectItem(element, index) {
+    // 바텀시트가 열려 있으면 닫기
+    closeBuySheet();
+
     document.querySelectorAll('.menu-item').forEach(item => {
         item.classList.remove('active');
     });
