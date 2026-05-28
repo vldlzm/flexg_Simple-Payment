@@ -333,16 +333,16 @@
                             <div class="ps-radio-row">
                                 <span class="ps-radio-label">· 간편결제 바로 노출</span>
                                 <div class="ps-radios">
-                                    <label class="ps-radio-item"><input type="radio" name="simplepay"> 사용안함</label>
-                                    <label class="ps-radio-item ps-radio-on"><input type="radio" name="simplepay" checked> 네이버페이</label>
-                                    <label class="ps-radio-item ps-radio-dim"><input type="radio" name="simplepay" disabled> 카카오페이</label>
-                                    <label class="ps-radio-item ps-radio-dim"><input type="radio" name="simplepay" disabled> 토스페이</label>
+                                    <label class="ps-radio-item"><input type="radio" name="simplepay" value="none" onchange="updateSimplePayPreview(this)"> 사용안함</label>
+                                    <label class="ps-radio-item ps-radio-on"><input type="radio" name="simplepay" value="naver" checked onchange="updateSimplePayPreview(this)"> 네이버페이</label>
+                                    <label class="ps-radio-item ps-radio-dim"><input type="radio" name="simplepay" value="kakao" disabled> 카카오페이</label>
+                                    <label class="ps-radio-item ps-radio-dim"><input type="radio" name="simplepay" value="toss" disabled> 토스페이</label>
                                 </div>
                             </div>
 
-                            <div class="ps-btn-preview">
+                            <div class="ps-btn-preview" id="psBtnPreview">
                                 <button class="ps-prev-cart">장바구니</button>
-                                <button class="ps-prev-npay"><span class="ps-n-badge">N</span>pay 구매</button>
+                                <button class="ps-prev-npay" id="psNpayBtn"><span class="ps-n-badge">N</span>pay 구매</button>
                                 <button class="ps-prev-buy">바로 구매</button>
                             </div>
                         </div>

@@ -134,6 +134,19 @@ function changeQty(delta) {
     renderBuySheet();
 }
 
+function updateSimplePayPreview(radio) {
+    const npayBtn = document.getElementById('psNpayBtn');
+    const preview = document.getElementById('psBtnPreview');
+    if (!npayBtn || !preview) return;
+    if (radio.value === 'none') {
+        npayBtn.style.display = 'none';
+        preview.style.justifyContent = 'center';
+    } else {
+        npayBtn.style.display = '';
+        preview.style.justifyContent = '';
+    }
+}
+
 function renderBuySheet() {
     const itemTotal = UNIT_PRICE * bsheetQty;
     const total     = itemTotal + SHIPPING;
