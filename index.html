@@ -15,13 +15,7 @@
             </div>
             <nav class="index-menu">
                 <ul>
-                    <li><a href="#" class="menu-item active" onclick="selectItem(this, 0)">결제 관리</a></li>
-                    <li><a href="#" class="menu-item" onclick="selectItem(this, 1)">거래 내역</a></li>
-                    <li><a href="#" class="menu-item" onclick="selectItem(this, 2)">통계</a></li>
-                    <li><a href="#" class="menu-item" onclick="selectItem(this, 3)">설정</a></li>
-                    <li><a href="#" class="menu-item" onclick="selectItem(this, 4)">고객 지원</a></li>
-                    <li><a href="#" class="menu-item" onclick="selectItem(this, 5)">상세</a></li>
-                    <li><a href="#" class="menu-item" onclick="selectItem(this, 6)">상품 상세</a></li>
+                    <li><a href="#" class="menu-item active" onclick="selectItem(this, 0)">상품 상세</a></li>
                 </ul>
             </nav>
         </aside>
@@ -29,50 +23,10 @@
         <!-- 중앙: 화면 -->
         <main class="main-content">
             <div class="content-header">
-                <h1>결제 관리</h1>
+                <h1>상품 상세</h1>
             </div>
             <div class="content-body">
                 <div class="screen" id="screen-0" style="display: block;">
-                    <h3>결제 관리</h3>
-                    <p>결제 처리 및 관리 화면입니다.</p>
-                    <div class="sample-card">
-                        <p>결제 정보 표시 영역</p>
-                    </div>
-                </div>
-                
-                <div class="screen" id="screen-1">
-                    <h3>거래 내역</h3>
-                    <p>모든 거래 기록을 확인합니다.</p>
-                    <div class="sample-card">
-                        <p>거래 내역 표시 영역</p>
-                    </div>
-                </div>
-                
-                <div class="screen" id="screen-2">
-                    <h3>통계</h3>
-                    <p>판매 및 거래 통계를 표시합니다.</p>
-                    <div class="sample-card">
-                        <p>통계 차트 표시 영역</p>
-                    </div>
-                </div>
-                
-                <div class="screen" id="screen-3">
-                    <h3>설정</h3>
-                    <p>시스템 설정을 관리합니다.</p>
-                    <div class="sample-card">
-                        <p>설정 옵션 표시 영역</p>
-                    </div>
-                </div>
-                
-                <div class="screen" id="screen-4">
-                    <h3>고객 지원</h3>
-                    <p>고객 지원 및 문의 처리입니다.</p>
-                    <div class="sample-card">
-                        <p>고객 지원 정보 표시 영역</p>
-                    </div>
-                </div>
-
-                <div class="screen" id="screen-6">
                     <div class="pdv-page">
                         <!-- 헤더 -->
                         <div class="pdv-header">
@@ -182,67 +136,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="screen" id="screen-5">
-                    <!-- 상품상세 화면 -->
-                    <div class="detail-header">
-                        <button class="back-btn">←</button>
-                        <h2>상품정보</h2>
-                        <div class="header-icons">
-                            <button class="icon-btn">🏠</button>
-                            <button class="icon-btn">🛒</button>
-                        </div>
-                    </div>
-
-                    <div class="detail-container">
-                        <!-- 상품 이미지 -->
-                        <div class="product-image">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect fill='%23e8e8e8' width='400' height='500'/%3E%3Ctext x='50%25' y='50%25' font-size='20' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EWhitening Body Lotion%3C/text%3E%3C/svg%3E" alt="Whitening Body Lotion">
-                            <div class="stock-badge">현재 수량 <span class="stock-count">205</span>개 남음</div>
-                        </div>
-
-                        <!-- 상품 정보 -->
-                        <div class="product-info">
-                            <div class="product-line">PREMIUM LINE</div>
-                            <h1 class="product-name">Whitening Body Lotion</h1>
-                            
-                            <div class="price-section">
-                                <span class="original-price">25,000원</span>
-                                <span class="discount-badge">60%</span>
-                                <span class="sale-price">10,000원</span>
-                            </div>
-
-                            <div class="option-section">
-                                <button class="option-btn">옵션 선택 ▼</button>
-                                <button class="quantity-btn">∞</button>
-                            </div>
-
-                            <div class="quantity-limit">
-                                · 구매수량 제한<br>
-                                <span>최소 1개 이상 최대 10개 이하</span>
-                            </div>
-
-                            <div class="purchase-stats">
-                                <span class="buy-count"><strong>222</strong>개 구매중</span>
-                                <div class="rating-section">
-                                    <button class="heart-btn">♡ 17</button>
-                                    <button class="star-btn">★ 13</button>
-                                </div>
-                            </div>
-
-                            <div class="discount-message">상품 할인받고 구매하세요!</div>
-
-                            <button class="coupon-btn">쿠폰 받기</button>
-
-                            <div class="shipping-banner">
-                                <span>♡</span>
-                                <span class="banner-text">장바구니 담고 <strong>배송비 절약</strong></span>
-                            </div>
-
-                            <button class="purchase-btn">구매하기</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </main>
 
@@ -254,22 +147,23 @@
             <div class="description-content">
                 <div class="description-section">
                     <h4>현재 화면</h4>
-                    <p id="current-title">결제 관리</p>
+                    <p id="current-title">상품 상세</p>
                 </div>
                 <div class="description-section">
                     <h4>설명</h4>
-                    <p id="current-description">
-                        결제 관리 화면에서는 고객의 결제 처리, 결제 상태 확인, 
-                        결제 취소 등의 작업을 수행할 수 있습니다.
-                    </p>
+                    <p id="current-description">모바일 쇼핑 앱의 상품 상세 화면입니다. 한정 수량 안내, 가격/할인율, 포인트 적립, 구매 통계, 쿠폰 수령, 장바구니 및 즉시 구매 기능을 제공합니다.</p>
                 </div>
                 <div class="description-section">
                     <h4>주요 기능</h4>
                     <ul id="current-features">
-                        <li>실시간 결제 처리</li>
-                        <li>결제 상태 모니터링</li>
-                        <li>결제 내역 조회</li>
-                        <li>오류 처리</li>
+                        <li>한정 수량 재고 표시</li>
+                        <li>할인율 및 최종가 표시</li>
+                        <li>포인트 적립 안내</li>
+                        <li>구매수량 제한 안내</li>
+                        <li>구매 통계 (구매중 · 찜 · 별점)</li>
+                        <li>쿠폰 받기</li>
+                        <li>장바구니 담기 (배송비 절약)</li>
+                        <li>즉시 구매하기</li>
                     </ul>
                 </div>
             </div>
