@@ -989,6 +989,421 @@ body {
     color: #aaa;
 }
 
+/* ========== 결제/무통장 설정 화면 ========== */
+.ps-page {
+    padding: 28px 30px 40px;
+    background: #fff;
+}
+
+.ps-page-header {
+    margin-bottom: 18px;
+}
+
+.ps-title-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+.ps-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+}
+
+.ps-pg-badge {
+    font-size: 12px;
+    color: #555;
+    background: #f2f2f2;
+    padding: 3px 10px;
+    border-radius: 4px;
+}
+
+.ps-desc {
+    font-size: 12.5px;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* 테이블 */
+.ps-table-wrap {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+.ps-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.ps-table thead tr {
+    background: #f8f8f8;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.ps-table th {
+    padding: 10px 12px;
+    font-weight: 600;
+    color: #444;
+    text-align: center;
+    font-size: 12.5px;
+}
+
+.ps-table tbody tr {
+    border-bottom: 1px solid #efefef;
+}
+
+.ps-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.ps-table td {
+    padding: 10px 12px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* 노출 순서 */
+.ps-order-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.ps-drag {
+    color: #bbb;
+    font-size: 14px;
+    cursor: grab;
+}
+
+.ps-arrows {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.ps-arrows button {
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    width: 18px;
+    height: 14px;
+    font-size: 9px;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 토글 */
+.ps-toggle-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+}
+
+.ps-lbl {
+    font-size: 10px;
+    color: #aaa;
+    font-weight: 500;
+}
+
+.ps-lbl.on {
+    color: #03c75a;
+}
+
+.ps-toggle {
+    position: relative;
+    width: 34px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.ps-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.ps-track {
+    position: absolute;
+    inset: 0;
+    background: #ccc;
+    border-radius: 18px;
+    transition: background 0.2s;
+}
+
+.ps-track::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: left 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.ps-toggle input:checked + .ps-track {
+    background: #03c75a;
+}
+
+.ps-toggle input:checked + .ps-track::after {
+    left: 18px;
+}
+
+/* 결제수단 명칭 */
+.ps-table td:nth-child(3) {
+    text-align: left;
+}
+
+.ps-pay-name {
+    font-size: 13px;
+    color: #222;
+    font-weight: 500;
+}
+
+.ps-cnt {
+    font-size: 11px;
+    color: #03c75a;
+    margin-left: 4px;
+}
+
+/* 혜택 노출 */
+.ps-benefit-cell {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ps-chk-label {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 11.5px;
+    color: #555;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.ps-chk-label input[type="checkbox"] {
+    accent-color: #03c75a;
+    width: 13px;
+    height: 13px;
+}
+
+.ps-chk-checked {
+    color: #03c75a;
+}
+
+.ps-benefit-txt {
+    font-size: 11.5px;
+    color: #555;
+}
+
+.ps-benefit-cnt {
+    font-size: 11px;
+    color: #03c75a;
+}
+
+/* 수수료 */
+.ps-table td:nth-child(5) {
+    text-align: left;
+}
+
+.ps-fee-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.ps-fee-name {
+    font-size: 12.5px;
+    color: #444;
+}
+
+.ps-fee-val {
+    font-size: 12.5px;
+    color: #03c75a;
+    font-weight: 600;
+}
+
+.ps-fee-note {
+    font-size: 11px;
+    color: #999;
+    line-height: 1.5;
+    margin: 2px 0 0;
+}
+
+/* 구분선 */
+.ps-divider-row td {
+    padding: 0;
+}
+
+.ps-green-divider {
+    height: 3px;
+    background: #03c75a;
+}
+
+/* 변경사항 적용 버튼 */
+.ps-apply-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 32px;
+}
+
+.ps-apply-btn {
+    background: #555;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 22px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* 간편결제 버튼 노출 설정 */
+.ps-section {
+    border-top: 1px solid #eee;
+    padding-top: 24px;
+    margin-bottom: 20px;
+}
+
+.ps-section-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.ps-section-desc {
+    font-size: 12.5px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.ps-link {
+    color: #03c75a;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ps-radio-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.ps-radio-label {
+    font-size: 13px;
+    color: #444;
+    white-space: nowrap;
+}
+
+.ps-radios {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.ps-radio-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    color: #444;
+    cursor: pointer;
+}
+
+.ps-radio-item input[type="radio"] {
+    accent-color: #03c75a;
+    width: 14px;
+    height: 14px;
+}
+
+.ps-radio-on {
+    color: #03c75a;
+    font-weight: 600;
+}
+
+.ps-radio-dim {
+    color: #bbb;
+    cursor: default;
+}
+
+/* 간편결제 버튼 미리보기 */
+.ps-btn-preview {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.ps-prev-cart {
+    padding: 12px 22px;
+    background: #5a4a4a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ps-prev-npay {
+    padding: 12px 22px;
+    background: #03c75a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ps-n-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    color: #03c75a;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.ps-prev-buy {
+    padding: 12px 22px;
+    background: #ff4d6d;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 /* ========== 구매 바텀시트 ========== */
 .bsheet-overlay {
     position: fixed;

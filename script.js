@@ -9,6 +9,11 @@ const menuData = [
         title: '상품 상세',
         description: '모바일 쇼핑 앱의 상품 상세 화면입니다.',
         features: []
+    },
+    {
+        title: '결제/무통장 설정',
+        description: '쇼핑몰 관리자 페이지의 결제수단 설정 화면입니다.',
+        features: []
     }
 ];
 
