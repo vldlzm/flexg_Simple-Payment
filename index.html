@@ -16,6 +16,7 @@
             <nav class="index-menu">
                 <ul>
                     <li><a href="#" class="menu-item active" onclick="selectItem(this, 0)">상품 상세</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectItem(this, 1)">결정사항</a></li>
                 </ul>
             </nav>
         </aside>
@@ -164,6 +165,53 @@
                                 <button class="pdv-buy-btn" onclick="openBuySheet()">구매하기</button>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="screen" id="screen-1">
+                    <div class="decision-wrap">
+                        <h2 class="decision-title">결정사항</h2>
+                        <table class="decision-table">
+                            <thead>
+                                <tr>
+                                    <th class="col-no">no.</th>
+                                    <th class="col-content">결정사항</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-no">1</td>
+                                    <td>이번 반영 범위: 네이버페이 / 카카오페이 / 토스페이 3개 동시 반영 vs 네이버페이만 우선 반영</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-no">2</td>
+                                    <td>페이사 계약이 완료된 고객사만 해당 버튼 활성화 가능하도록 제한할지 여부</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-no">3</td>
+                                    <td>최소 1개 버튼은 반드시 활성화되도록 강제할지 여부</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-no">4</td>
+                                    <td>신규 고객사 가입 시 기본값 정의 (예: 네이버페이만 기본 ON)</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-no">5</td>
+                                    <td>고객사가 버튼을 활성화했지만 해당 페이사 계약이 만료된 경우 처리 방식</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-no">6</td>
+                                    <td>페이사 SDK 로드 실패 시 버튼 비노출 또는 에러 표시 방식</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-no">7</td>
+                                    <td>모든 버튼 비활성화 상태일 때 쇼핑몰 구매 버튼 영역 처리 방식</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-no">8</td>
+                                    <td>설정 변경 이력 로깅 여부 결정</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

@@ -881,6 +881,69 @@ body {
 .purchase-btn:hover {
     background-color: #ff5252;
 }
+/* ========== 결정사항 화면 ========== */
+.decision-wrap {
+    padding: 32px 28px;
+}
+
+.decision-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 24px;
+    letter-spacing: -0.3px;
+}
+
+.decision-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.decision-table thead tr {
+    background: #2c3e50;
+    color: #fff;
+}
+
+.decision-table th {
+    padding: 12px 16px;
+    font-weight: 600;
+    text-align: left;
+    letter-spacing: 0.2px;
+}
+
+.decision-table th.col-no,
+.decision-table td.col-no {
+    width: 52px;
+    text-align: center;
+}
+
+.decision-table tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background 0.15s;
+}
+
+.decision-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.decision-table tbody tr:hover {
+    background: #f7f9ff;
+}
+
+.decision-table td {
+    padding: 14px 16px;
+    color: #333;
+    line-height: 1.6;
+    vertical-align: middle;
+}
+
+.decision-table td.col-no {
+    color: #667eea;
+    font-weight: 700;
+    font-size: 14px;
+}
+
 /* ========== 구매 바텀시트 ========== */
 .bsheet-overlay {
     position: fixed;
