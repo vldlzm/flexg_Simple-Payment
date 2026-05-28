@@ -140,7 +140,7 @@ function updateSimplePayPreview(radio) {
     if (!npayBtn || !preview) return;
     if (radio.value === 'none') {
         npayBtn.style.display = 'none';
-        preview.style.justifyContent = 'center';
+        preview.style.justifyContent = 'flex-start';
     } else {
         npayBtn.style.display = '';
         preview.style.justifyContent = '';
