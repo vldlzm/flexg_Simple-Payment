@@ -1279,15 +1279,16 @@ body {
 
 /* 간편결제 버튼 노출 설정 */
 .ps-section {
-    border-top: 1px solid #eee;
-    padding-top: 24px;
+    border: 2px solid #e8233a;
+    border-radius: 6px;
+    padding: 20px 24px 24px;
     margin-bottom: 20px;
 }
 
 .ps-section-title {
     font-size: 17px;
     font-weight: 700;
-    color: #111;
+    color: #000;
     margin-bottom: 8px;
 }
 
