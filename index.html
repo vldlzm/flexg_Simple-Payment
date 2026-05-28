@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Payment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 좌측: 인덱스 -->
+        <aside class="sidebar-left">
+            <div class="sidebar-header">
+                <h2>인덱스</h2>
+            </div>
+            <nav class="index-menu">
+                <ul>
+                    <li><a href="#" class="menu-item active" onclick="selectItem(this, 0)">결제 관리</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectItem(this, 1)">거래 내역</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectItem(this, 2)">통계</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectItem(this, 3)">설정</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectItem(this, 4)">고객 지원</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectItem(this, 5)">상세</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectItem(this, 6)">상품 상세</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- 중앙: 화면 -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1>결제 관리</h1>
+            </div>
+            <div class="content-body">
+                <div class="screen" id="screen-0" style="display: block;">
+                    <h3>결제 관리</h3>
+                    <p>결제 처리 및 관리 화면입니다.</p>
+                    <div class="sample-card">
+                        <p>결제 정보 표시 영역</p>
+                    </div>
+                </div>
+                
+                <div class="screen" id="screen-1">
+                    <h3>거래 내역</h3>
+                    <p>모든 거래 기록을 확인합니다.</p>
+                    <div class="sample-card">
+                        <p>거래 내역 표시 영역</p>
+                    </div>
+                </div>
+                
+                <div class="screen" id="screen-2">
+                    <h3>통계</h3>
+                    <p>판매 및 거래 통계를 표시합니다.</p>
+                    <div class="sample-card">
+                        <p>통계 차트 표시 영역</p>
+                    </div>
+                </div>
+                
+                <div class="screen" id="screen-3">
+                    <h3>설정</h3>
+                    <p>시스템 설정을 관리합니다.</p>
+                    <div class="sample-card">
+                        <p>설정 옵션 표시 영역</p>
+                    </div>
+                </div>
+                
+                <div class="screen" id="screen-4">
+                    <h3>고객 지원</h3>
+                    <p>고객 지원 및 문의 처리입니다.</p>
+                    <div class="sample-card">
+                        <p>고객 지원 정보 표시 영역</p>
+                    </div>
+                </div>
+
+                <div class="screen" id="screen-6">
+                    <div class="pdv-page">
+                        <!-- 헤더 -->
+                        <div class="pdv-header">
+                            <button class="pdv-back-btn">&#8592;</button>
+                            <span class="pdv-title-text">상품정보</span>
+                            <div class="pdv-header-right">
+                                <button class="pdv-hicon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+                                        <path d="M9 21V12h6v9"/>
+                                    </svg>
+                                </button>
+                                <button class="pdv-hicon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                                        <line x1="3" y1="6" x2="21" y2="6"/>
+                                        <path d="M16 10a4 4 0 01-8 0"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 스크롤 영역 -->
+                        <div class="pdv-body">
+                            <!-- 상품 이미지 -->
+                            <div class="pdv-img-wrap">
+                                <svg viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg" class="pdv-product-img">
+                                    <rect width="400" height="480" fill="#ece9e3"/>
+                                    <path d="M0 260 Q80 240 160 260 Q240 280 320 255 Q360 245 400 255" stroke="#ddd8d0" stroke-width="2.5" fill="none" opacity="0.5"/>
+                                    <path d="M0 310 Q100 295 200 315 Q300 330 400 310" stroke="#ddd8d0" stroke-width="2" fill="none" opacity="0.4"/>
+                                    <path d="M40 380 Q120 365 200 380 Q280 395 360 375" stroke="#ddd8d0" stroke-width="2" fill="none" opacity="0.3"/>
+                                    <ellipse cx="200" cy="432" rx="78" ry="11" fill="#c8c3ba" opacity="0.35"/>
+                                    <rect x="153" y="88" width="94" height="320" rx="16" fill="#f3f0ea"/>
+                                    <rect x="153" y="88" width="94" height="320" rx="16" fill="none" stroke="#e2ddd5" stroke-width="1.5"/>
+                                    <rect x="162" y="66" width="76" height="27" rx="9" fill="#eae5dc"/>
+                                    <rect x="162" y="66" width="76" height="27" rx="9" fill="none" stroke="#d8d3ca" stroke-width="1.2"/>
+                                    <rect x="157" y="88" width="14" height="320" rx="7" fill="rgba(255,255,255,0.35)"/>
+                                    <text x="200" y="172" font-size="14" text-anchor="middle" fill="#555" font-family="Georgia,'Times New Roman',serif" font-style="italic">Nécessaire</text>
+                                    <text x="200" y="194" font-size="9" text-anchor="middle" fill="#888" font-family="Georgia,serif">The Body Lotion</text>
+                                    <text x="200" y="211" font-size="9" text-anchor="middle" fill="#888" font-family="Georgia,serif">L'Emulsion Corps</text>
+                                    <line x1="168" y1="230" x2="232" y2="230" stroke="#e0dbd2" stroke-width="0.8"/>
+                                    <text x="200" y="355" font-size="7" text-anchor="middle" fill="#bbb" font-family="Arial,sans-serif" letter-spacing="1">FRAGRANCE FREE</text>
+                                    <text x="200" y="370" font-size="6" text-anchor="middle" fill="#ccc" font-family="Arial,sans-serif">300 ml / 10.1 fl oz</text>
+                                </svg>
+                            </div>
+
+                            <!-- 재고 알림 -->
+                            <div class="pdv-stock-bar">
+                                한정 수량 <span class="pdv-stock-num">205</span> 개 남음
+                            </div>
+
+                            <!-- 상품 정보 -->
+                            <div class="pdv-info">
+                                <p class="pdv-brand-label">PREMIUM LINE</p>
+                                <h2 class="pdv-product-name">Whitening Body Lotion</h2>
+
+                                <!-- 가격 1행 -->
+                                <div class="pdv-price-row1">
+                                    <span class="pdv-orig-price">25,000원</span>
+                                    <span class="pdv-disc-pct">60%</span>
+                                </div>
+                                <!-- 가격 2행 -->
+                                <div class="pdv-price-row2">
+                                    <span class="pdv-final-price">10,000원</span>
+                                    <div class="pdv-point-wrap">
+                                        <button class="pdv-point-btn">포인트 받기! &#8594;</button>
+                                        <span class="pdv-point-coin">
+                                            <svg width="30" height="30" viewBox="0 0 30 30">
+                                                <circle cx="15" cy="15" r="14" fill="#f5a623"/>
+                                                <circle cx="15" cy="15" r="10" fill="#e8961a" opacity="0.3"/>
+                                                <text x="15" y="19" font-size="11" text-anchor="middle" fill="#fff" font-weight="bold" font-family="Arial">₩</text>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- 구매수량 제한 -->
+                                <div class="pdv-qty-row">
+                                    <span class="pdv-qty-label">· 구매수량 제한</span>
+                                    <span class="pdv-qty-val">최소 1개 이상 최대 10개 이하</span>
+                                </div>
+
+                                <!-- 구매 통계 -->
+                                <div class="pdv-stats-row">
+                                    <span class="pdv-buying-cnt"><strong>222</strong>개 구매중</span>
+                                    <div class="pdv-reactions">
+                                        <span class="pdv-heart-cnt">&#9825; 17</span>
+                                        <span class="pdv-star-cnt">&#9733; 13</span>
+                                    </div>
+                                </div>
+
+                                <!-- 쿠폰 행 -->
+                                <div class="pdv-coupon-row">
+                                    <span class="pdv-disc-msg">상품 할인받고 구매하세요!</span>
+                                    <button class="pdv-coupon-btn">쿠폰 받기</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 하단 고정 바 -->
+                        <div class="pdv-bottom">
+                            <div class="pdv-cart-row">
+                                <button class="pdv-wish-btn">&#9825;</button>
+                                <button class="pdv-cart-btn">장바구니 담고 <strong>배송비 절약</strong> 구매하기</button>
+                            </div>
+                            <button class="pdv-buy-btn">구매하기</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screen" id="screen-5">
+                    <!-- 상품상세 화면 -->
+                    <div class="detail-header">
+                        <button class="back-btn">←</button>
+                        <h2>상품정보</h2>
+                        <div class="header-icons">
+                            <button class="icon-btn">🏠</button>
+                            <button class="icon-btn">🛒</button>
+                        </div>
+                    </div>
+
+                    <div class="detail-container">
+                        <!-- 상품 이미지 -->
+                        <div class="product-image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect fill='%23e8e8e8' width='400' height='500'/%3E%3Ctext x='50%25' y='50%25' font-size='20' text-anchor='middle' dominant-baseline='middle' fill='%23999'%3EWhitening Body Lotion%3C/text%3E%3C/svg%3E" alt="Whitening Body Lotion">
+                            <div class="stock-badge">현재 수량 <span class="stock-count">205</span>개 남음</div>
+                        </div>
+
+                        <!-- 상품 정보 -->
+                        <div class="product-info">
+                            <div class="product-line">PREMIUM LINE</div>
+                            <h1 class="product-name">Whitening Body Lotion</h1>
+                            
+                            <div class="price-section">
+                                <span class="original-price">25,000원</span>
+                                <span class="discount-badge">60%</span>
+                                <span class="sale-price">10,000원</span>
+                            </div>
+
+                            <div class="option-section">
+                                <button class="option-btn">옵션 선택 ▼</button>
+                                <button class="quantity-btn">∞</button>
+                            </div>
+
+                            <div class="quantity-limit">
+                                · 구매수량 제한<br>
+                                <span>최소 1개 이상 최대 10개 이하</span>
+                            </div>
+
+                            <div class="purchase-stats">
+                                <span class="buy-count"><strong>222</strong>개 구매중</span>
+                                <div class="rating-section">
+                                    <button class="heart-btn">♡ 17</button>
+                                    <button class="star-btn">★ 13</button>
+                                </div>
+                            </div>
+
+                            <div class="discount-message">상품 할인받고 구매하세요!</div>
+
+                            <button class="coupon-btn">쿠폰 받기</button>
+
+                            <div class="shipping-banner">
+                                <span>♡</span>
+                                <span class="banner-text">장바구니 담고 <strong>배송비 절약</strong></span>
+                            </div>
+
+                            <button class="purchase-btn">구매하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 우측: 화면설명 -->
+        <aside class="sidebar-right">
+            <div class="sidebar-header">
+                <h2>화면 설명</h2>
+            </div>
+            <div class="description-content">
+                <div class="description-section">
+                    <h4>현재 화면</h4>
+                    <p id="current-title">결제 관리</p>
+                </div>
+                <div class="description-section">
+                    <h4>설명</h4>
+                    <p id="current-description">
+                        결제 관리 화면에서는 고객의 결제 처리, 결제 상태 확인, 
+                        결제 취소 등의 작업을 수행할 수 있습니다.
+                    </p>
+                </div>
+                <div class="description-section">
+                    <h4>주요 기능</h4>
+                    <ul id="current-features">
+                        <li>실시간 결제 처리</li>
+                        <li>결제 상태 모니터링</li>
+                        <li>결제 내역 조회</li>
+                        <li>오류 처리</li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
