@@ -1,13 +1,13 @@
 // 각 메뉴별 설명 데이터
 const menuData = [
     {
-        title: '상품 상세',
-        description: '모바일 쇼핑 앱의 상품 상세 화면입니다.',
+        title: '결정사항',
+        description: '개발 진행 전 확정이 필요한 결정사항 목록입니다.',
         features: []
     },
     {
-        title: '결정사항',
-        description: '개발 진행 전 확정이 필요한 결정사항 목록입니다.',
+        title: '상품 상세',
+        description: '모바일 쇼핑 앱의 상품 상세 화면입니다.',
         features: []
     }
 ];
