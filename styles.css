@@ -1262,7 +1262,7 @@ body {
 /* 변경사항 적용 버튼 */
 .ps-apply-row {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-bottom: 32px;
 }
 
