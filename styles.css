@@ -944,6 +944,43 @@ body {
     font-size: 14px;
 }
 
+.decision-resolved {
+    display: block;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.decision-detail {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.decision-detail li {
+    font-size: 13px;
+    color: #555;
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.55;
+}
+
+.decision-detail li::before {
+    content: "·";
+    position: absolute;
+    left: 4px;
+    color: #667eea;
+    font-weight: bold;
+}
+
+.decision-detail li strong {
+    color: #333;
+    font-weight: 600;
+}
+
 /* ========== 구매 바텀시트 ========== */
 .bsheet-overlay {
     position: fixed;
