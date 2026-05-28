@@ -981,6 +981,16 @@ body {
     font-weight: 600;
 }
 
+.decision-detail--sub {
+    margin-top: 6px;
+    padding-left: 8px;
+}
+
+.decision-detail--sub li::before {
+    content: "–";
+    color: #aaa;
+}
+
 /* ========== 구매 바텀시트 ========== */
 .bsheet-overlay {
     position: fixed;
