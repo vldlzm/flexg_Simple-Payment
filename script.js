@@ -58,7 +58,17 @@ let bsheetQty = 1;
 function openBuySheet() {
     bsheetQty = 1;
     renderBuySheet();
-    document.getElementById('bsheetOverlay').classList.add('active');
+
+    // pdv-page 위치에 오버레이를 맞춤
+    const page    = document.querySelector('.pdv-page');
+    const overlay = document.getElementById('bsheetOverlay');
+    if (page) {
+        const rect = page.getBoundingClientRect();
+        overlay.style.left  = rect.left + 'px';
+        overlay.style.width = rect.width + 'px';
+    }
+
+    overlay.classList.add('active');
 }
 
 function closeBuySheet() {
