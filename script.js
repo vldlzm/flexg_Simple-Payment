@@ -30,6 +30,10 @@ const menuData = [
         title: '결제/무통장 설정',
         sections: [
             {
+                title: '위치',
+                items: ['/Setting/pay']
+            },
+            {
                 title: '동작 방식',
                 items: [
                     '간편결제 버튼은 네이버페이 / 카카오페이 / 토스페이 중 1개만 선택 가능하다 (단일 선택)',
