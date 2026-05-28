@@ -522,7 +522,6 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 9px;
 }
 
 .pdv-wish-btn {
@@ -557,7 +556,7 @@ body {
 }
 
 .pdv-buy-btn {
-    width: 100%;
+    flex: 1;
     padding: 16px;
     background: #e8233a;
     border: none;
