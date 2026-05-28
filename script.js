@@ -2,18 +2,31 @@
 const menuData = [
     {
         title: '결정사항',
-        description: '개발 진행 전 확정이 필요한 결정사항 목록입니다.',
-        features: []
+        sections: []
     },
     {
         title: '상품 상세',
-        description: '모바일 쇼핑 앱의 상품 상세 화면입니다.',
-        features: []
+        sections: []
     },
     {
         title: '결제/무통장 설정',
-        description: '쇼핑몰 관리자 페이지의 결제수단 설정 화면입니다.',
-        features: []
+        sections: [
+            {
+                title: '동작 방식',
+                items: [
+                    '간편결제 버튼은 네이버페이 / 카카오페이 / 토스페이 중 1개만 선택 가능하다 (단일 선택)',
+                    '사용안함 선택 시 간편결제 버튼은 노출되지 않는다',
+                    '하단 미리보기 영역에서 선택한 버튼이 실시간으로 반영되어 보여진다',
+                    '변경사항 적용 버튼 클릭 시 프론트에 반영된다'
+                ]
+            },
+            {
+                title: '비활성 조건',
+                items: [
+                    'PG 서비스 신청이 완료되지 않은 페이사는 선택 불가(disabled) 처리된다'
+                ]
+            }
+        ]
     }
 ];
 
@@ -47,12 +60,18 @@ function updateDescription(index) {
     const data = menuData[index];
 
     document.getElementById('current-title').textContent = data.title;
-    document.getElementById('current-description').textContent = data.description;
 
-    const featureList = document.getElementById('current-features');
-    featureList.innerHTML = data.features
-        .map(feature => `<li>${feature}</li>`)
-        .join('');
+    const extra = document.getElementById('extra-sections');
+    if (data.sections && data.sections.length > 0) {
+        extra.innerHTML = data.sections.map(sec => `
+            <div class="description-section">
+                <h4>${sec.title}</h4>
+                <ul>${sec.items.map(item => `<li>${item}</li>`).join('')}</ul>
+            </div>
+        `).join('');
+    } else {
+        extra.innerHTML = '';
+    }
 }
 
 // 페이지 로드 시 초기화
