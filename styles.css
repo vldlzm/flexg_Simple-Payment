@@ -944,7 +944,7 @@ body {
 
 .decision-resolved {
     display: block;
-    font-weight: 600;
+    font-weight: 400;
     color: #111;
     margin-bottom: 10px;
 }
